@@ -12,8 +12,9 @@ public class EarthquakeController {
 
     EarthquakeService earthquakeService = new EarthquakeService();
 
-    @RequestMapping(value = "/earthquake&days={dt}&country={ct}", method = RequestMethod.GET, headers = "Accept=application/json")
-    public List<?> getEarthquakes(@PathVariable String dt, @PathVariable String ct) throws JsonProcessingException {
+    // Example request localhost:8080/earthquake?days=30&country=Turkey
+    @RequestMapping(value = "/earthquake", method = RequestMethod.GET, headers = "Accept=application/json")
+    public List<?> getEarthquakes(@RequestParam(name = "days") String dt, @RequestParam(name = "country") String ct) throws JsonProcessingException {
         return earthquakeService.getEarthquakeData(dt, ct);
     }
 

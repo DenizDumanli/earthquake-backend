@@ -45,9 +45,9 @@ public class EarthquakeService {
                 SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 dateTime = jdf.format(date);
 
-                Earthquake weather = new Earthquake(country, place, mag, dateTime);
+                Earthquake earthquake = new Earthquake(country, place, mag, dateTime);
 
-                places.add(weather);
+                places.add(earthquake);
             }
             i++;
         }
