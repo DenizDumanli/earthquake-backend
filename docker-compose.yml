@@ -3,6 +3,7 @@ services:
   earthquake-backend:
     container_name: earthquake-backend
     build:
+      context: .
       dockerfile: Dockerfile
     image: earthquake-backend:latest
     ports:
